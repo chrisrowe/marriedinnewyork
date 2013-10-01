@@ -1,0 +1,30 @@
+.pagination {
+    @include clearfix;
+    background:#bbb;
+
+    .intro {
+        float:left;
+        padding:1em;
+    }
+
+    .links {
+        float:right;
+
+        li {
+            float:left;
+            list-style:none;
+            margin-left:0;
+        }
+
+        a {
+            display:block;
+            padding:1em;
+            text-decoration:none;
+        }
+
+        .cur a {
+            background:#fff;
+        }
+    }
+
+}

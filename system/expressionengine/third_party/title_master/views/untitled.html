@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<head>
+    <title>Cobranded Emails</title>
+	<link rel="stylesheet" type="text/css" href="http://cms.worldvacationsgroup.net/css/bootstrap.min.css" />
+
+	<style>
+	body{
+		background:url('http://cms.worldvacationsgroup.net/images/siteBuild/body_bg.png') repeat-x;
+	}
+	.header_logo img{
+	border: 1px solid #888;
+	}
+	.body_container{
+		margin-top:5px;
+		background: white;
+		box-shadow: 0 0 30px -10px #88B3CF;
+		behavior: url(http://cms.worldvacationsgroup.net/css/PIE.htc);
+		padding: 10px 20px 36px;
+		border-width: 0 1px 1px;
+		border-style: solid;
+		border-color: #E5EEF4;
+		position: relative;
+		width:810px;
+	}	
+	.wide-dropdown{
+	width:800px;
+	height:38px;
+	line-height:38px;
+	font-size:18px;
+	}
+		#previewIframe{
+			width:795px;
+			height:400px;
+		}
+		#html-code{			
+			width:800px;
+			height:300px;
+		}
+
+#emailSubject{font-weight:100;}
+#iframeLoading{margin-left:10px;}
+	h1,h2,h3,h4{
+		margin-bottom:10px;
+	}
+	.inlineBtn{
+	margin-bottom:9px;
+	}
+	.left{float:left;}
+	.right{float:right;}
+	table .alignRight{text-align: right;}
+	.copyright{
+	width:850px;
+	padding:20px 0;
+	}
+	</style>
+</head>
+<body>
+<div class="container body_container">
+<div class="header_logo left clear">
+	<img src="http://cms.worldvacationsgroup.net/images/siteBuild/Email-Silversea-Header.jpg"  />
+</div>
+
+{if segment_3}
+
+	<p><a href="/emails/{segment_2}/">&larr; All Campaigns</a></p>
+	<h2>Links</h2>
+	<ol>
+	{exp:query sql="select link,count(*) ct from expemail_redirects where campaign = '{segment_3}' group by link order by ct desc"}
+	<li><a href="http://silversealuxcruises.com{link}" target="_blank">{link}</a> - {ct}</li>
+	{/exp:query}
+	</ol>
+
+	<h2>Agencies</h2>
+	<ol>
+	{exp:query sql="select title,agency,count(*) ct from expemail_redirects r join exp_weblog_titles t on r.agency = t.url_title group by agency order by ct desc limit 10"}
+	<li>{title} - {ct}</li>
+	{/exp:query}
+	</ol>
+
+
+{if:else}
+
+	<h2>Campaigns</h2>
+	<table class="table table-bordered table-striped campaignTable">
+		<thead>
+			<tr>
+				<th></th>
+				<th>Name</th>
+				<th>Clicks</th>
+				<th>Date</th>
+			</tr>
+		</thead>
+		<tbody>		
+			{exp:query sql="select title,url_title,FROM_UNIXTIME(entry_date,'%M %d, %Y') as date,count(*) ct from expemail_redirects r join exp_weblog_titles t on r.campaign = t.url_title group by campaign order by entry_date desc "}
+			<tr>
+				<td class="orderNumber alignRight"></td>
+				<td><a href="/emails/{segment_2}/{url_title}">{title}</td>
+				<td class="alignRight">{ct}</td>
+				<td>{date}</td>
+			</tr>
+			{/exp:query}
+		</tbody>
+	</table>
+
+	<h2>Agencies</h2>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th></th>
+				<th>Name</th>
+				<th>Clicks</th>
+				<th>Contact Name</th>
+				<th>Location</th>
+			</tr>
+		</thead>
+		<tbody>		
+		{exp:query sql="select title,agency,site,count(*) as ct,field_id_148 as first_name,field_id_149 as last_name,field_id_151 as city,field_id_152 as state
+from expemail_redirects r 
+join exp_weblog_titles t on r.agency = t.url_title 
+join exp_weblog_data d on d.entry_id = t.entry_id 
+group by agency order by ct desc limit 10"}
+			<tr>
+				<td class="orderNumber alignRight">{count}</td>
+				<td><a href="http://{agency}.site.wvgcruise.com">{title}</a></td>
+				<td class="alignRight">{ct}</td>
+				<td>{first_name} {last_name}</td>
+				<td>{city}, {state}</td>
+			</tr>
+			{/exp:query}
+		</tbody>
+	</table>
+
+
+	<h2>Links</h2>
+		<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th></th>
+				<th>Name</th>
+				<th>Clicks</th>
+			</tr>
+		</thead>
+		<tbody>		
+	{exp:query sql="select link,count(*) ct from expemail_redirects group by link order by ct desc limit 10"}
+			<tr>
+				<td class="orderNumber alignRight">{count}</td>
+				<td><a href="http://silversealuxcruises.com{link}">{link}</a></td>
+				<td class="alignRight">{ct}</td>								
+			</tr>
+			{/exp:query}
+		</tbody>
+	</table>
+
+
+{/if}
+
+</div>
+</body>
+</html>

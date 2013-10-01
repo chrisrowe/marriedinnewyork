@@ -1,0 +1,19 @@
+# OSX Files
+.DS_Store
+
+# Local settings
+system/expressionengine/config/local_settings.php
+
+# Uploads
+public/media/uploads
+
+# Caches
+.sass-cache
+public/static/cache
+system/expressionengine/cache/
+
+# Node
+node_modules
+
+# DB
+db

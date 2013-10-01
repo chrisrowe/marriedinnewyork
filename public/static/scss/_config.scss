@@ -1,0 +1,44 @@
+// DEBUG -------------------- //
+
+// $debug-mode:true;
+// $visual-grid:true;
+$visual-grid-color:red;
+$visual-grid-index:front;
+$visual-grid-opacity:0.1;
+
+
+// GRID -------------------- //
+
+$column:67px;
+$gutter:20px;
+$grid-columns:12;
+$max-width:em(1064);
+
+
+// BREAKPOINTS -------------------- //
+
+$tablet:new-breakpoint(max-width 768px 8);
+$mobile:new-breakpoint(max-width 480px 4);
+
+
+// FONTS -------------------- //
+
+$sans1:'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+$sans2:Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+
+$base-font-size:14;
+$base-line-height:20;
+
+$base-spacing-unit:$base-line-height;
+
+$h1-size:36;
+$h2-size:30;
+$h3-size:24;
+$h4-size:20;
+$h5-size:16;
+$h6-size:14;
+
+
+// COLOURS -------------------- //
+
+$branding1:#0191CD;

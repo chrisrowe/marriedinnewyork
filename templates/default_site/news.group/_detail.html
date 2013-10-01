@@ -1,0 +1,32 @@
+{embed="_layout/_start"
+}
+
+<div class="content_pri">
+
+    {exp:channel:entries
+        channel="news"
+        require_entry="yes"
+    }
+        {if no_results}{redirect="404"}{/if}
+
+        <h1>{title}</h1>
+        <h2 class="meta">Posted on {entry_date format="%l %j%S %F, %Y"}</h2>
+
+        {cf_news_content}
+
+        {embed="{segment_1}/_share"
+            entry_id="{entry_id}"
+        }
+
+    {/exp:channel:entries}
+
+
+</div> <!-- // .content_pri -->
+
+<div class="content_sec">
+
+    {embed="{segment_1}/_sidebar"}
+
+</div> <!-- // .content_sec -->
+
+{embed="_layout/_end"}

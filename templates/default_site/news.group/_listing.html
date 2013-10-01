@@ -1,0 +1,61 @@
+{embed="_layout/_start"
+    default_title="News"
+}
+
+<div class="content_pri">
+
+    <h1>News</h1>
+
+    {exp:channel:entries
+        channel="news"
+        limit="4"
+        dynamic="off"
+        paginate="bottom"
+        year="{segment_3}"
+    }
+
+        <h2><a href="{url_title_path='news'}">{title}</a></h2>
+        <h3 class="meta">Posted on {entry_date format="%l %j%S %F, %Y"}</h3>
+
+        <p>
+            {exp:eehive_hacksaw
+                words="30"
+                append="..."
+             }
+                {cf_news_content}
+            {/exp:eehive_hacksaw}
+            <a href="{url_title_path='news'}">Read full post</a>
+        </p>
+
+        {paginate}
+            <div class="pagination">
+                <div class="intro">Page {current_page} of {total_pages} pages</div>
+                <div class="links">
+                    {pagination_links}
+                        <ul>
+                            {previous_page}
+                                    <li><a href="{pagination_url}" class="page-previous">&lsaquo; Previous</a></li>
+                            {/previous_page}
+                            {page limit="3"}
+                                    <li{if current_page} class='cur'{/if}><a href="{pagination_url}" class="page-{pagination_page_number}">{pagination_page_number}</a></li>
+                            {/page}
+                            {next_page}
+                                    <li><a href="{pagination_url}" class="page-next">Next &rsaquo;</a></li>
+                            {/next_page}
+                        </ul>
+                    {/pagination_links}
+                </div>
+            </div>
+        {/paginate}
+
+    {/exp:channel:entries}
+
+</div> <!-- // .content_pri -->
+
+<div class="content_sec">
+
+    {embed="{segment_1}/_sidebar"}
+
+</div> <!-- // .content_sec -->
+
+{embed="_layout/_end"}

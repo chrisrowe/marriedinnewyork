@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+    <head>
+
+        <!-- META -->
+        <meta charset="utf-8" />
+        {exp:seo_lite use_last_segment='yes'
+            title_postfix='{embed:title_postfix}'
+            default_title='{embed:default_title}'
+            default_keywords='{embed:default_keywords}'
+            default_description='{embed:default_description}'
+        }
+        <meta name="author" content="http://webdna.co.uk" />
+        <meta name="description" content="" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{exp:cache_buster file='/static/css/screen.css'}" />
+
+        <!-- ICONS -->
+        <link rel="icon" type="image/x-icon" href="/static/images/icons/favicon.ico" />
+
+        <!-- RSS -->
+        <!-- <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss/feed.xml" /> -->
+
+        <!-- MODERNIZR -->
+        <script src="/static/js/lib/modernizr.js"></script>
+
+        <!-- ANALYTICS -->
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+
+    </head>
+
+    <body class="{embed:body_class}" dir="ltr">
+
+        <div class="header" role="banner">
+            <div class="wrapper">
+
+                <div class="branding">
+                    <a href="/">
+                        <img src="/static/images/branding/branding.png" width="200" height="100" alt="Branding" />
+                    </a>
+                </div><!-- //.branding -->
+
+                <div class="nav_pri">
+                    <ul role="navigation">
+
+                        {exp:structure:nav
+                            add_level_classes="yes"
+                            has_children_class="yes"
+                            current_class="cur"
+                            max_depth="1"
+                            start_from="/"
+                        }
+
+                    </ul>
+                </div><!-- //.nav_pri -->
+
+            </div><!-- //.wrapper -->
+        </div><!-- //.header -->
+
+        <div class="main" role="main">
+            <div class="wrapper">

@@ -1,0 +1,410 @@
+// BODY -------------------- //
+
+html{
+    font-family:$sans1;
+    font-size:$base-font-size / 16 +em;
+    line-height:$base-line-height / $base-font-size;
+}
+
+body {
+    background-color:#fff;
+    color:#222;
+}
+
+
+// DEFAULT STYLING -------------------- //
+
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dl,
+blockquote,p,address,
+table,
+form,
+pre,
+hr{
+    margin-bottom:$base-spacing-unit + px;
+    margin-bottom:$base-spacing-unit / $base-font-size +rem;
+}
+
+ul {
+    list-style:disc;
+
+    li {
+        margin-left:20px;
+    }
+}
+
+ ol {
+    list-style:decimal;
+
+    li {
+        margin-left:20px;
+    }
+}
+
+dl {
+
+
+    dt {
+        font-weight:600;
+    }
+    dd {
+        margin-left:30px;
+    }
+}
+
+hr {
+    border:0;
+    border-bottom:1px solid #ddd;
+    margin:30px 0;
+}
+
+blockquote {
+    border-left:5px solid #ddd;
+    color:#555;
+    padding-left:20px;
+
+    p {
+
+    }
+    cite {
+
+    }
+}
+
+code,
+pre {
+    font-family:monospace;
+}
+code {
+    background:#eee;
+    padding:0 3px;
+}
+pre {
+
+
+    code {
+
+    }
+}
+
+abbr {
+
+
+    &:hover {
+        cursor:help;
+    }
+}
+
+del {
+    text-decoration:line-through;
+}
+
+b,
+strong {
+    font-weight:bold;
+}
+em,
+i {
+    font-style:italic;
+}
+
+sup {
+    vertical-align:super;
+}
+sub {
+    vertical-align:sub;
+}
+
+small {
+
+}
+
+figure {
+
+
+    img {
+
+    }
+    figcaption {
+
+    }
+}
+
+iframe,
+img,
+object,
+video {
+    height:auto;
+    max-width:100%;
+}
+
+
+// HEADLINES -------------------- //
+
+h1,
+.alpha {
+    @include font-size($h1-size);
+}
+h2,
+.beta {
+    @include font-size($h2-size);
+}
+h3,
+.gamma {
+    @include font-size($h3-size);
+}
+h4,
+.delta {
+    @include font-size($h4-size);
+}
+h5,
+.epsilon {
+    @include font-size($h5-size);
+}
+h6,
+.zeta {
+    @include font-size($h6-size);
+}
+
+// LINKS -------------------- //
+
+a {
+    color:$branding1;
+
+    &:hover,
+    &:focus {
+
+    }
+}
+
+
+// FORMS -------------------- //
+
+form {
+
+
+    dl {
+
+
+        dt {
+
+        }
+        dd {
+
+        }
+    }
+
+    ul {
+
+    }
+    li {
+
+    }
+
+} // form
+
+fieldset {
+
+}
+
+label {
+
+
+    em {
+
+    }
+} // label
+
+input[type="text"],
+input[type="email"],
+textarea {
+
+}
+input[type="checkbox"],
+input[type="radio"] {
+
+}
+textarea {
+
+}
+
+input[type="submit"] {
+
+}
+
+
+// TABLES -------------------- //
+
+table {
+
+}
+
+caption {
+
+}
+legend {
+
+}
+
+tr {
+
+}
+
+th,
+td {
+
+}
+th {
+
+}
+td {
+
+}
+
+thead {
+
+
+    th {
+
+    }
+    td {
+
+    }
+} // thead
+
+tbody {
+
+
+    th {
+
+    }
+    td {
+
+    }
+} // tbody
+
+// HELPERS -------------------- //
+
+.left {
+    float:left;
+}
+.right {
+    float:right;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+
+// LAYOUT -------------------- //
+
+.header,
+.main,
+.footer{
+    @include clearfix;
+}
+
+.wrapper {
+    @include outer-container;
+    background:#ddd;
+}
+
+.content_pri {
+    @include span-columns(8);
+    background:#eee;
+
+    @include media($tablet) {
+        @include span-columns(5);
+    }
+    @include media($mobile) {
+        @include span-columns(4);
+    }
+}
+
+.content_sec {
+    @include span-columns(4);
+    @include omega;
+    background:#eee;
+
+    @include media($tablet) {
+        @include span-columns(3);
+    }
+    @include media($mobile) {
+        @include span-columns(4);
+    }
+
+}
+
+// HEADER & BRANDING -------------------- //
+
+.header {
+
+    .wrapper {
+        background:#ccc;
+    }
+}
+
+.branding {
+    margin:0;
+    padding:0;
+
+    a {
+        display:block;
+        height:100px;
+        width:200px;
+
+        .svg & {
+            background-image:url("/static/images/branding/branding.svg");
+            background-repeat:no-repeat;
+
+            img {
+                visibility:hidden;
+            }
+        }
+    }
+
+} // .branding
+
+
+// FOOTER -------------------- //
+
+.footer {
+
+    .wrapper {
+        background:#ccc;
+    }
+}
+
+
+// NAVIGATION -------------------- //
+
+.nav_pri {
+
+    ul {
+        margin-bottom:0;
+    }
+
+    li {
+        float:left;
+        list-style:none;
+        margin-left:0;
+    }
+
+    a {
+        display:block;
+        padding:1em;
+        text-decoration:none;
+
+        &:hover,
+        &:focus {
+
+        }
+    }
+
+    .parent-cur a,
+    .cur a {
+        background:#fff;
+    }
+
+} // .nav_pri
