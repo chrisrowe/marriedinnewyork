@@ -1,7 +1,7 @@
 // BODY -------------------- //
 
 html{
-    font-family:$sans1;
+    font-family:$font1;
     font-size:$base-font-size / 16 +em;
     line-height:$base-line-height / $base-font-size;
 }
@@ -144,18 +144,22 @@ video {
 h1,
 .alpha {
     @include font-size($h1-size);
+    color:$branding1;
 }
 h2,
 .beta {
     @include font-size($h2-size);
+    color:$branding2;
 }
 h3,
 .gamma {
     @include font-size($h3-size);
+    color:$branding2;
 }
 h4,
 .delta {
     @include font-size($h4-size);
+    color:$branding2;
 }
 h5,
 .epsilon {
@@ -307,12 +311,10 @@ tbody {
 
 .wrapper {
     @include outer-container;
-    background:#ddd;
 }
 
 .content_pri {
     @include span-columns(8);
-    background:#eee;
 
     @include media($tablet) {
         @include span-columns(5);
@@ -325,7 +327,6 @@ tbody {
 .content_sec {
     @include span-columns(4);
     @include omega;
-    background:#eee;
 
     @include media($tablet) {
         @include span-columns(3);
@@ -340,23 +341,29 @@ tbody {
 
 .header {
 
+    background:url("/static/images/header-bg.jpg");
+    background-position:center 25%;
+    background-size:cover;
+    min-height:500px;
+    margin-bottom:30px;
+
     .wrapper {
-        background:#ccc;
     }
 }
 
 .branding {
-    margin:0;
+    margin:40px 0 0 0;
     padding:0;
 
     a {
         display:block;
-        height:100px;
-        width:200px;
+        height:158px;
+        width:446px;
 
         .svg & {
             background-image:url("/static/images/branding/branding.svg");
             background-repeat:no-repeat;
+            background-size:contain;
 
             img {
                 visibility:hidden;

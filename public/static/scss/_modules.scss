@@ -1,30 +1,12 @@
-.pagination {
-    @include clearfix;
-    background:#bbb;
+.office,
+.us {
+    @include span-columns (3 of 8);
+    margin-left:30px;
+    margin-top:-50px;
+    float:right;
+}
 
-    .intro {
-        float:left;
-        padding:1em;
-    }
-
-    .links {
-        float:right;
-
-        li {
-            float:left;
-            list-style:none;
-            margin-left:0;
-        }
-
-        a {
-            display:block;
-            padding:1em;
-            text-decoration:none;
-        }
-
-        .cur a {
-            background:#fff;
-        }
-    }
-
+.office {
+    margin-top:0;
+    border:3px solid $branding1;
 }

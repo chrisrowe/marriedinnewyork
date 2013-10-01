@@ -5,15 +5,9 @@
 
         <!-- META -->
         <meta charset="utf-8" />
-        {exp:seo_lite use_last_segment='yes'
-            title_postfix='{embed:title_postfix}'
-            default_title='{embed:default_title}'
-            default_keywords='{embed:default_keywords}'
-            default_description='{embed:default_description}'
-        }
-        <meta name="author" content="http://webdna.co.uk" />
-        <meta name="description" content="" />
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+        <meta name="author" content="http://chrisrowe.net" />
+        <meta name="description" content="Amy Page and Chris Rowe are getting married in New York" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- CSS -->
         <link rel="stylesheet" href="{exp:cache_buster file='/static/css/screen.css'}" />
@@ -21,11 +15,12 @@
         <!-- ICONS -->
         <link rel="icon" type="image/x-icon" href="/static/images/icons/favicon.ico" />
 
-        <!-- RSS -->
-        <!-- <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss/feed.xml" /> -->
-
         <!-- MODERNIZR -->
         <script src="/static/js/lib/modernizr.js"></script>
+
+        <!-- TYPEKIT -->
+        <script type="text/javascript" src="//use.typekit.net/xhn5ace.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
         <!-- ANALYTICS -->
         <script type="text/javascript">
@@ -51,20 +46,6 @@
                         <img src="/static/images/branding/branding.png" width="200" height="100" alt="Branding" />
                     </a>
                 </div><!-- //.branding -->
-
-                <div class="nav_pri">
-                    <ul role="navigation">
-
-                        {exp:structure:nav
-                            add_level_classes="yes"
-                            has_children_class="yes"
-                            current_class="cur"
-                            max_depth="1"
-                            start_from="/"
-                        }
-
-                    </ul>
-                </div><!-- //.nav_pri -->
 
             </div><!-- //.wrapper -->
         </div><!-- //.header -->

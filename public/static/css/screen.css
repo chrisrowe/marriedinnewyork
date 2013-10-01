@@ -202,9 +202,9 @@ textarea {
 
 /* endif */
 html {
-  font-family: "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
-  font-size: 0.875em;
-  line-height: 1.42857;
+  font-family: "futura-pt";
+  font-size: 1.25em;
+  line-height: 1.2;
 }
 
 body {
@@ -219,8 +219,8 @@ table,
 form,
 pre,
 hr {
-  margin-bottom: 20px;
-  margin-bottom: 1.42857rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.2rem;
 }
 
 ul {
@@ -303,47 +303,51 @@ video {
 h1,
 .alpha {
   font-size: 36;
-  font-size: 2.57143rem;
-  line-height: 1.11111;
+  font-size: 1.8rem;
+  line-height: 1.33333;
+  color: #d5091f;
 }
 
 h2,
 .beta {
   font-size: 30;
-  font-size: 2.14286rem;
-  line-height: 1.33333;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #888888;
 }
 
 h3,
 .gamma {
   font-size: 24;
-  font-size: 1.71429rem;
-  line-height: 1.66667;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #888888;
 }
 
 h4,
 .delta {
   font-size: 20;
-  font-size: 1.42857rem;
-  line-height: 1;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #888888;
 }
 
 h5,
 .epsilon {
   font-size: 16;
-  font-size: 1.14286rem;
-  line-height: 1.25;
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 h6,
 .zeta {
   font-size: 14;
-  font-size: 1rem;
-  line-height: 1.42857;
+  font-size: 0.7rem;
+  line-height: 1.71429;
 }
 
 a {
-  color: #0191cd;
+  color: #d5091f;
 }
 
 .left {
@@ -386,10 +390,9 @@ a {
 
 .wrapper {
   zoom: 1;
-  max-width: 66.5em;
+  max-width: 47.5em;
   margin-left: auto;
   margin-right: auto;
-  background: #ddd;
 }
 .wrapper:before, .wrapper:after {
   content: "";
@@ -402,9 +405,8 @@ a {
 .content_pri {
   display: block;
   float: left;
-  margin-right: 1.95313%;
-  width: 66.01563%;
-  background: #eee;
+  margin-right: 2.12766%;
+  width: 65.95745%;
 }
 .content_pri:last-child {
   margin-right: 0;
@@ -413,8 +415,8 @@ a {
   .content_pri {
     display: block;
     float: left;
-    margin-right: 2.95858%;
-    width: 61.39053%;
+    margin-right: 3.22581%;
+    width: 61.29032%;
   }
   .content_pri:last-child {
     margin-right: 0;
@@ -424,7 +426,7 @@ a {
   .content_pri {
     display: block;
     float: left;
-    margin-right: 6.09756%;
+    margin-right: 6.66667%;
     width: 100%;
   }
   .content_pri:last-child {
@@ -435,10 +437,9 @@ a {
 .content_sec {
   display: block;
   float: left;
-  margin-right: 1.95313%;
-  width: 32.03125%;
+  margin-right: 2.12766%;
+  width: 31.91489%;
   margin-right: 0;
-  background: #eee;
 }
 .content_sec:last-child {
   margin-right: 0;
@@ -447,8 +448,8 @@ a {
   .content_sec {
     display: block;
     float: left;
-    margin-right: 2.95858%;
-    width: 35.65089%;
+    margin-right: 3.22581%;
+    width: 35.48387%;
   }
   .content_sec:last-child {
     margin-right: 0;
@@ -458,7 +459,7 @@ a {
   .content_sec {
     display: block;
     float: left;
-    margin-right: 6.09756%;
+    margin-right: 6.66667%;
     width: 100%;
   }
   .content_sec:last-child {
@@ -466,22 +467,27 @@ a {
   }
 }
 
-.header .wrapper {
-  background: #ccc;
+.header {
+  background: url("/static/images/header-bg.jpg");
+  background-position: center 25%;
+  background-size: cover;
+  min-height: 500px;
+  margin-bottom: 30px;
 }
 
 .branding {
-  margin: 0;
+  margin: 40px 0 0 0;
   padding: 0;
 }
 .branding a {
   display: block;
-  height: 100px;
-  width: 200px;
+  height: 158px;
+  width: 446px;
 }
 .svg .branding a {
   background-image: url("/static/images/branding/branding.svg");
   background-repeat: no-repeat;
+  background-size: contain;
 }
 .svg .branding a img {
   visibility: hidden;
@@ -509,34 +515,22 @@ a {
   background: #fff;
 }
 
-.pagination {
-  zoom: 1;
-  background: #bbb;
-}
-.pagination:before, .pagination:after {
-  content: "";
-  display: table;
-}
-.pagination:after {
-  clear: both;
-}
-.pagination .intro {
+.office,
+.us {
+  display: block;
   float: left;
-  padding: 1em;
-}
-.pagination .links {
+  margin-right: 3.22581%;
+  width: 35.48387%;
+  margin-left: 30px;
+  margin-top: -50px;
   float: right;
 }
-.pagination .links li {
-  float: left;
-  list-style: none;
-  margin-left: 0;
+.office:last-child,
+.us:last-child {
+  margin-right: 0;
 }
-.pagination .links a {
-  display: block;
-  padding: 1em;
-  text-decoration: none;
-}
-.pagination .links .cur a {
-  background: #fff;
+
+.office {
+  margin-top: 0;
+  border: 3px solid #d5091f;
 }

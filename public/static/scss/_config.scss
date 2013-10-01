@@ -9,10 +9,10 @@ $visual-grid-opacity:0.1;
 
 // GRID -------------------- //
 
-$column:67px;
-$gutter:20px;
+$column:90px;
+$gutter:30px;
 $grid-columns:12;
-$max-width:em(1064);
+$max-width:em(760);
 
 
 // BREAKPOINTS -------------------- //
@@ -23,11 +23,10 @@ $mobile:new-breakpoint(max-width 480px 4);
 
 // FONTS -------------------- //
 
-$sans1:'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
-$sans2:Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+$font1:"futura-pt";
 
-$base-font-size:14;
-$base-line-height:20;
+$base-font-size:20;
+$base-line-height:24;
 
 $base-spacing-unit:$base-line-height;
 
@@ -41,4 +40,5 @@ $h6-size:14;
 
 // COLOURS -------------------- //
 
-$branding1:#0191CD;
+$branding1:#d5091f;
+$branding2:#888;
