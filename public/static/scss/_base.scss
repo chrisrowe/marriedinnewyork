@@ -7,7 +7,7 @@ html{
 }
 
 body {
-    background-color:#fff;
+    background:lighten(#eee,3%);
     color:#222;
 }
 
@@ -53,9 +53,10 @@ dl {
 }
 
 hr {
+    width:100%;
     border:0;
-    border-bottom:1px solid #ddd;
-    margin:30px 0;
+    border-bottom:0px solid #ddd;
+    margin:0;
 }
 
 blockquote {
@@ -120,13 +121,32 @@ small {
 }
 
 figure {
+    width:80%;
 
+    &.left {
+        margin-left:-100px;
+
+        figcaption {
+            text-align:left;
+        }
+    }
+    &.right {
+        margin-right:-100px;
+        margin-left:30px;
+    }
 
     img {
 
     }
     figcaption {
-
+        z-index:1;
+        position:relative;
+        background:rgba(#000,.5);
+        color:#fff;
+        margin-top:-50px;
+        margin-bottom:50px;
+        padding:5px 50px 8px;
+        text-align:right;
     }
 }
 
@@ -136,6 +156,7 @@ object,
 video {
     height:auto;
     max-width:100%;
+    // margin-right:-10%;
 }
 
 
@@ -148,8 +169,26 @@ h1,
 }
 h2,
 .beta {
+    &:before {
+        border-top:1px solid #eee;
+        content:"";
+        display:block;
+        margin-top:20px;
+        margin-bottom:-12px;
+        width:100%;
+    }
     @include font-size($h2-size);
+    @include clearfix;
     color:$branding2;
+    text-transform:uppercase;
+    text-align:center;
+    margin-top:50px;
+    width:100%;
+
+    span {
+        background:#fff;
+        padding:0 10px;
+    }
 }
 h3,
 .gamma {
@@ -311,10 +350,18 @@ tbody {
 
 .wrapper {
     @include outer-container;
+    padding:0 50px;
+}
+
+.main {
+    .wrapper {
+        background:#fff;
+    }
 }
 
 .content_pri {
-    @include span-columns(8);
+    @include span-columns(12);
+    padding-top:35px;
 
     @include media($tablet) {
         @include span-columns(5);
@@ -340,22 +387,21 @@ tbody {
 // HEADER & BRANDING -------------------- //
 
 .header {
+    // background-attachment:fixed;
+    // background:url("/static/images/header-bg.jpg");
+    background:url("/static/images/header-bg.jpg") #252525 no-repeat fixed;
+    background-position:top center;
+    background-size:150%;
+    height:700px;
+    position:relative;
+    width:100%;
 
-    background:url("/static/images/header-bg.jpg");
-    background-position:center 25%;
-    background-size:cover;
-    min-height:500px;
-    margin-bottom:30px;
-
-    .wrapper {
-    }
 }
 
 .branding {
-    margin:40px 0 0 0;
-    padding:0;
 
     a {
+        margin:0 auto;
         display:block;
         height:158px;
         width:446px;
@@ -372,6 +418,14 @@ tbody {
     }
 
 } // .branding
+
+.us {
+    width:100%;
+
+    img {
+        margin:30px auto;
+    }
+}
 
 
 // FOOTER -------------------- //

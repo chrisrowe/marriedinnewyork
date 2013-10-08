@@ -12,7 +12,7 @@ $visual-grid-opacity:0.1;
 $column:90px;
 $gutter:30px;
 $grid-columns:12;
-$max-width:em(760);
+$max-width:em(500);
 
 
 // BREAKPOINTS -------------------- //
@@ -30,8 +30,8 @@ $base-line-height:24;
 
 $base-spacing-unit:$base-line-height;
 
-$h1-size:36;
-$h2-size:30;
+$h1-size:38;
+$h2-size:24;
 $h3-size:24;
 $h4-size:20;
 $h5-size:16;
@@ -41,4 +41,4 @@ $h6-size:14;
 // COLOURS -------------------- //
 
 $branding1:#d5091f;
-$branding2:#888;
+$branding2:#999;
