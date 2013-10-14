@@ -7,7 +7,9 @@ $(function() {
     $(".nav_pri li").on("click", function(){
         $(".nav_pri li").removeClass("cur");
         $(this).addClass("cur");
-        var section = $(this).attr("data-section");
+        var section = $(this).attr("data-sectionlink");
+        $(".section").addClass("hidden");
+        $("." + section).removeClass("hidden");
     })
 
 });
