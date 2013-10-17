@@ -422,6 +422,7 @@ h1,
   line-height: 1.26316;
   line-height: 1em;
   color: #d5091f;
+  text-align: center;
 }
 @media screen and (max-width: 480px) {
   h1,
@@ -588,6 +589,7 @@ a {
   margin-right: 2.12766%;
   width: 100%;
   padding-top: 35px;
+  padding-bottom: 35px;
 }
 .content_pri:last-child {
   margin-right: 0;
@@ -749,6 +751,22 @@ a {
 
 .footer .wrapper {
   background: #ccc;
+  background-image: url("/static/images/skyline.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 105px;
+}
+.svg .footer .wrapper {
+  background-image: url("/static/images/skyline.svg");
+}
+.footer p {
+  font-size: 14;
+  font-size: 0.7rem;
+  line-height: 1.71429;
+  color: #555;
+  padding-top: 30px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .nav_pri ul {
@@ -772,4 +790,9 @@ a {
 }
 .nav_pri .cur a {
   background: #f3f3f3;
+}
+
+.fullbreak {
+  border-bottom: 1px solid #ccc;
+  margin: 50px 0 40px;
 }

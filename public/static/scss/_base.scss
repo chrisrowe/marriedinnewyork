@@ -231,6 +231,7 @@ h1,
     @include font-size($h1-size);
     line-height:1em;
     color:$branding1;
+    text-align:center;
 
     @include media($mobile) {
         @include font-size(30);
@@ -449,6 +450,7 @@ tbody {
 .content_pri {
     @include span-columns(12);
     padding-top:35px;
+    padding-bottom:35px;
 
     @include media($tablet) {
         @include span-columns(8);
@@ -610,6 +612,21 @@ tbody {
 
     .wrapper {
         background:#ccc;
+        background-image:url("/static/images/skyline.png");
+        .svg & {
+            background-image:url("/static/images/skyline.svg");
+        }
+        background-repeat:no-repeat;
+        background-size:contain;
+        padding-top:105px;
+    }
+
+    p {
+        @include font-size(14);
+        color:#555;
+        padding-top:30px;
+        text-align:center;
+        text-transform:uppercase;
     }
 }
 
@@ -647,3 +664,8 @@ tbody {
     }
 
 } // .nav_pri
+
+.fullbreak {
+    border-bottom:1px solid #ccc;
+    margin:50px 0 40px;
+}
