@@ -205,11 +205,13 @@ html {
   font-family: "futura-pt";
   font-size: 1.25em;
   line-height: 1.2;
+  height: 100%;
 }
 
 body {
   background: #f6f6f6;
   color: #222;
+  height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, hgroup,
@@ -515,6 +517,10 @@ h6,
 
 a {
   color: #d5091f;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
 }
 
 form ul {
@@ -669,7 +675,8 @@ input[type="submit"]:hover {
 }
 
 .hidden {
-  display: none;
+  opacity: 0;
+  z-index: 1 !important;
 }
 
 .header,
@@ -721,8 +728,11 @@ input[type="submit"]:hover {
   float: left;
   margin-right: 2.12766%;
   width: 100%;
+  background: #fff;
   padding-top: 35px;
   padding-bottom: 35px;
+  position: relative;
+  z-index: 0;
 }
 .content_pri:last-child {
   margin-right: 0;
@@ -751,8 +761,10 @@ input[type="submit"]:hover {
 }
 
 .section {
-  margin-bottom: 80px;
-  padding-bottom: 20px;
+  position: absolute;
+  -webkit-transition: opacity .5s ease;
+  margin-bottom: 20px;
+  z-index: 2;
 }
 
 .header {
@@ -851,6 +863,19 @@ input[type="submit"]:hover {
 .us {
   width: 100%;
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .us {
+    background: url("/static/images/us2x.png");
+    height: 122px;
+    margin: 30px auto;
+    width: 122px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .us img {
+    display: none;
+  }
+}
 .us img {
   margin: 30px auto;
   -webkit-animation-name: fade-us-in;
@@ -859,11 +884,6 @@ input[type="submit"]:hover {
   -webkit-animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   -webkit-animation-iteration-count: 1;
-}
-@media screen and (max-width: 600px) {
-  .us img {
-    margin-top: 70px;
-  }
 }
 
 @-webkit-keyframes fade-us-in {
@@ -952,9 +972,6 @@ input[type="submit"]:hover {
     font-size: 0.7rem;
     line-height: 1.71429;
     margin: 0 -50px;
-    top: 0;
-    bottom: auto;
-    position: fixed;
   }
 }
 @media screen and (max-width: 480px) {
@@ -977,18 +994,19 @@ input[type="submit"]:hover {
   padding: .8em .1em;
   text-decoration: none;
   text-align: center;
+  -webkit-transition: background-color .3s ease;
 }
 @media screen and (max-width: 600px) {
   .nav_pri a {
-    background: rgba(255, 255, 255, 0.95);
+    background: #eee;
   }
 }
 .nav_pri a:hover, .nav_pri a:focus {
-  text-decoration: underline;
+  text-decoration: none;
   background: #fff;
 }
 .nav_pri .cur a {
-  background: rgba(34, 34, 34, 0.9);
+  background: rgba(213, 9, 31, 0.9);
   color: #fff;
   position: relative;
 }
@@ -998,7 +1016,7 @@ input[type="submit"]:hover {
   border-color: transparent;
   border-style: solid;
   border-width: 7.5px;
-  border-top-color: rgba(34, 34, 34, 0.9);
+  border-top-color: rgba(213, 9, 31, 0.9);
   content: "";
   position: absolute;
   left: 50%;
