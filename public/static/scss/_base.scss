@@ -232,6 +232,7 @@ h1,
     line-height:1em;
     color:$branding1;
     text-align:center;
+    padding-top:10px;
 
     @include media($mobile) {
         @include font-size(30);
@@ -318,10 +319,10 @@ form {
     }
 
     ul {
-
+        list-style:none;
     }
     li {
-
+        margin-left:0;
     }
 
 } // form
@@ -331,28 +332,117 @@ fieldset {
 }
 
 label {
+    color:#777;
+    float:left;
+    width:27%;
+    text-align:right;
+    padding-right:7px;
 
+    @include media(max-width 600px) {
+        width:100%;
+        text-align:left;
+    }
 
     em {
 
     }
 } // label
 
+.radios {
+    float:left;
+    width:70%;
+
+    @include media(max-width 600px) {
+        width:100%;
+        text-align:left;
+    }
+
+    li {
+    }
+
+    label {
+        color:#ccc;
+        cursor:pointer;
+        width:70%;
+        padding-left:40px;
+        background-image:url("/static/images/radios.svg");
+        background-repeat:no-repeat;
+        text-align:left;
+        background-position:7px -38px;
+
+        @include media(max-width 600px) {
+            width:100%;
+        }
+    }
+
+    input[type="radio"] {
+        float:left;
+        border:0;
+    }
+    input[type="radio"]:checked + label{
+        color:#222;
+        background-position:7px 8px;
+    }
+
+
+}
+
 input[type="text"],
 input[type="email"],
 textarea {
+    -webkit-font-smoothing:antialiased;
+    background:none;
+    background-image:url("/static/images/lines.svg");
+    background-position:0 38px;
+    border:none;
+    font-family:$font2;
+    font-size:30px;
+    text-rendering:optimizeLegibility;
+    width:65%;
 
+    @include media(max-width 600px) {
+        width:100%;
+        text-align:left;
+    }
+
+    &:focus {
+        border:none;
+        background-image:url("/static/images/lines-on.svg");
+        outline:0;
+    }
+    @include placeholder {
+        color:#ccc;
+        font-family:$font2;
+    }
 }
 input[type="checkbox"],
 input[type="radio"] {
-
+    opacity:0;
+    width:0;
 }
 textarea {
-
+    border:none;
+    background-repeat:repeat;
+    background-image:url("/static/images/lines.svg");
+    background-position:0 38px;
+    resize: none;
+    line-height:44px;
+    height:200px;
 }
 
 input[type="submit"] {
+    background:none;
+    border:none;
+    float:right;
+    margin:0 20px 20px 0;
+    font-family:$font2;
+    font-size:30px;
+    padding:10px 20px;
+    border-radius:4px;
 
+    &:hover {
+        background:#ccc;
+    }
 }
 
 
@@ -460,6 +550,11 @@ tbody {
     }
 }
 
+.section {
+    margin-bottom:80px;
+    padding-bottom:20px
+}
+
 
 // HEADER & BRANDING -------------------- //
 
@@ -473,7 +568,7 @@ tbody {
     position:relative;
     width:100%;
 
-    // -webkit-animation-name: fade-header-in;
+    -webkit-animation-name: fade-header-in;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-delay: 0s;
     -webkit-animation-duration: 1s;
@@ -501,6 +596,7 @@ tbody {
 
     .wrapper {
         height:100%;
+        position:relative;
         -webkit-transition:background .3s ease;
     }
 }
@@ -517,7 +613,7 @@ tbody {
 
 .branding {
 
-    // -webkit-animation-name: slide-branding-in;
+    -webkit-animation-name: slide-branding-in;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-delay: 2s;
     -webkit-animation-duration: 1s;
@@ -564,7 +660,12 @@ tbody {
 
     img {
         margin:30px auto;
-        // -webkit-animation-name: fade-us-in;
+
+        @include media(max-width 600px) {
+            margin-top:70px;
+        }
+
+        -webkit-animation-name: fade-us-in;
         -webkit-animation-timing-function: ease-in-out;
         -webkit-animation-delay: 1s;
         -webkit-animation-duration: 1s;
@@ -588,7 +689,7 @@ tbody {
 .main {
 
     .wrapper {
-        // -webkit-animation-name: fade-main-in;
+        -webkit-animation-name: fade-main-and-footer-in;
         -webkit-animation-timing-function: ease-in-out;
         -webkit-animation-delay: 3s;
         -webkit-animation-duration: 1s;
@@ -597,7 +698,7 @@ tbody {
     }
 }
 
-@-webkit-keyframes fade-main-in {
+@-webkit-keyframes fade-main-and-footer-in {
     from {
         opacity: 0;
     }
@@ -618,7 +719,14 @@ tbody {
         }
         background-repeat:no-repeat;
         background-size:contain;
-        padding-top:105px;
+        padding-top:90px;
+
+        -webkit-animation-name: fade-main-and-footer-in;
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-delay: 3s;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        -webkit-animation-iteration-count: 1;
     }
 
     p {
@@ -633,7 +741,40 @@ tbody {
 
 // NAVIGATION -------------------- //
 
+
+@-webkit-keyframes fade-nav-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .nav_pri {
+    position:absolute;
+    width:100%;
+    margin-left:-50px;
+    bottom:0;
+    z-index:99;
+
+    -webkit-animation-name: fade-nav-in;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 2.5s;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-iteration-count: 1;
+
+    @include media(max-width 600px) {
+        @include font-size(14);
+        margin:0 -50px;
+        top:0;
+        bottom:auto;
+        position:fixed;
+    }
+    @include media(max-width 480px) {
+        margin:0 -20px;
+    }
 
     ul {
         margin-bottom:0;
@@ -647,20 +788,35 @@ tbody {
     }
 
     a {
+        background:rgba(#fff,.8);
+        @include media(max-width 600px) {
+            background:rgba(#fff,.95);
+        }
         display:block;
-        padding:.6em 1em;
+        padding:.8em .1em;
         text-decoration:none;
         text-align:center;
 
         &:hover,
         &:focus {
             text-decoration:underline;
-            background:lighten(#eee,2%);
+            background:#fff;
         }
     }
 
     .cur a {
-        background:lighten(#eee,2%);
+        background:rgba(#222,.9);
+        color:#fff;
+        position:relative;
+
+        &:after {
+            @include triangle(15px, rgba(#222,.9), down);
+            content:"";
+            position:absolute;
+            left:50%;
+            margin-left:-7px;
+            top:100%;
+        }
     }
 
 } // .nav_pri
@@ -668,4 +824,19 @@ tbody {
 .fullbreak {
     border-bottom:1px solid #ccc;
     margin:50px 0 40px;
+}
+
+
+.rsvp-form {
+    @include font-size(30);
+    background:#eee;
+    font-family:$font2;
+    margin:0 -50px;
+    padding:40px 30px 80px;
+
+
+    @include media(max-width 500px) {
+        margin:0 -20px;
+        padding:40px 20px 80px;
+    }
 }
