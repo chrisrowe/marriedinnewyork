@@ -558,11 +558,14 @@ label {
   color: #ccc;
   cursor: pointer;
   width: 70%;
-  padding-left: 40px;
-  background-image: url("/static/images/radios.svg");
+  padding-left: 35px;
+  background-image: url("/static/images/radios.png");
   background-repeat: no-repeat;
   text-align: left;
-  background-position: 7px -38px;
+  background-position: 2px -38px;
+}
+.svg .radios label {
+  background-image: url("/static/images/radios.svg");
 }
 @media screen and (max-width: 600px) {
   .radios label {
@@ -575,7 +578,10 @@ label {
 }
 .radios input[type="radio"]:checked + label {
   color: #222;
-  background-position: 7px 8px;
+  background-position: 2px 8px;
+}
+.radios input[type="radio"]:focus + label {
+  color: #777;
 }
 
 input[type="text"],
@@ -583,13 +589,18 @@ input[type="email"],
 textarea {
   -webkit-font-smoothing: antialiased;
   background: none;
-  background-image: url("/static/images/lines.svg");
+  background-image: url("/static/images/lines.png");
   background-position: 0 38px;
   border: none;
   font-family: "kremlin-pro-web", sans-serif;
   font-size: 30px;
   text-rendering: optimizeLegibility;
   width: 65%;
+}
+.svg input[type="text"], .svg
+input[type="email"], .svg
+textarea {
+  background-image: url("/static/images/lines.svg");
 }
 @media screen and (max-width: 600px) {
   input[type="text"],
@@ -603,8 +614,13 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
   border: none;
-  background-image: url("/static/images/lines-on.svg");
+  background-image: url("/static/images/lines-on.png");
   outline: 0;
+}
+.svg input[type="text"]:focus, .svg
+input[type="email"]:focus, .svg
+textarea:focus {
+  background-image: url("/static/images/lines-on.svg");
 }
 input[type="text"]::-webkit-input-placeholder,
 input[type="email"]::-webkit-input-placeholder,
@@ -628,17 +644,25 @@ textarea:-ms-input-placeholder {
 input[type="checkbox"],
 input[type="radio"] {
   opacity: 0;
-  width: 0;
+  width: 1px;
+}
+
+textarea:disabled,
+input:disabled {
+  color: #ddd;
 }
 
 textarea {
   border: none;
   background-repeat: repeat;
-  background-image: url("/static/images/lines.svg");
+  background-image: url("/static/images/lines.png");
   background-position: 0 38px;
   resize: none;
   line-height: 44px;
   height: 200px;
+}
+.svg textarea {
+  background-image: url("/static/images/lines.svg");
 }
 
 input[type="submit"] {
@@ -676,7 +700,9 @@ input[type="submit"]:hover {
 
 .hidden {
   opacity: 0;
-  z-index: 1 !important;
+  overflow: hidden;
+  height: 0;
+  margin: 0 !important;
 }
 
 .header,
@@ -732,7 +758,6 @@ input[type="submit"]:hover {
   padding-top: 35px;
   padding-bottom: 35px;
   position: relative;
-  z-index: 0;
 }
 .content_pri:last-child {
   margin-right: 0;
@@ -761,10 +786,8 @@ input[type="submit"]:hover {
 }
 
 .section {
-  position: absolute;
-  -webkit-transition: opacity .5s ease;
   margin-bottom: 20px;
-  z-index: 2;
+  -webkit-transition: opacity .5s ease;
 }
 
 .header {
@@ -1043,4 +1066,25 @@ input[type="submit"]:hover {
     margin: 0 -20px;
     padding: 40px 20px 80px;
   }
+}
+.rsvp-form .thanks,
+.rsvp-form .form {
+  -webkit-transition: opacity .4s ease;
+}
+.rsvp-form.complete .thanks {
+  font-weight: 700;
+  font-size: 42px;
+  margin-top: 50px;
+  position: absolute;
+  text-align: center;
+  width: 110%;
+  z-index: 99;
+}
+@media screen and (max-width: 500px) {
+  .rsvp-form.complete .thanks {
+    width: 100%;
+  }
+}
+.rsvp-form.complete .form {
+  opacity: 0;
 }
