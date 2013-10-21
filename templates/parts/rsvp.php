@@ -9,24 +9,24 @@
     <hr/>
     <h2><span>R&eacute;pondez s'il vous pla&icirc;t</span></h2>
 
-    <form class="rsvp-form" action="" autocomplete="off">
+    <form method="post" class="rsvp-form" action="http://marriedinnewyork.createsend.com/t/d/s/ourk/" autocomplete="off">
 
         <ul class="form">
             <li>
                 <label for="name">From:</label>
-                <input name="name" id="name" type="text" placeholder="Your name(s)" spellcheck="false"/></li>
+                <input name="cm-name" id="name" type="text" placeholder="Your name(s)" spellcheck="false"/></li>
             <li>
                 <label for="email">Email:</label>
-                <input name="email" id="email" type="email" placeholder="Email address" spellcheck="false" /></li>
+                <input name="cm-ourk-ourk" id="email" type="email" placeholder="Email address" spellcheck="false" /></li>
             <li>
                 <label>I/We are&hellip;</label>
                 <ul class="radios">
                     <li>
 
-                        <input id="attending" type="radio" name="attending" value="yes">
+                        <input id="attending" type="radio" name="cm-fo-jlky" value="5129">
                         <label for="attending">Able to attend</label><br/>
 
-                        <input id="notattending" type="radio" name="attending" value="no">
+                        <input id="notattending" type="radio" name="cm-fo-jlky" value="5130">
                         <label for="notattending">Not able to attend</label>
 
                     </li>
@@ -34,10 +34,10 @@
             </li>
             <li>
                 <label for="message">Your message:</label>
-                <textarea name="message" id="message" placeholder="Message to Amy &amp; Chris" spellcheck="false"></textarea>
+                <textarea name="cm-f-jlkj" id="message" placeholder="Message to Amy &amp; Chris" spellcheck="false"></textarea>
             </li>
             <li class="submit">
-                <input type="submit" value="Send RSVP" />
+                <input name="subscribe" type="submit" value="Send RSVP" />
             </li>
         </ul>
 
