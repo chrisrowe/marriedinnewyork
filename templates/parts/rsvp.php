@@ -1,47 +1,48 @@
 <div class="section rsvp hidden">
     <div class="content">
 
-        <h1>RSVP</h1>
-        <p>
-            Please fill out the short form or text us on 07534943969 to RSVP, we hope you can make it!
-        </p>
+    <h1>RSVP</h1>
 
-        <hr/>
-        <h2><span>R&eacute;pondez s'il vous pla&icirc;t</span></h2>
+    <p>
+        Please fill out the short form or text us on 07534943969 to RSVP, we hope you can make it!
+    </p>
 
-        <form class="rsvp-form" action="" autocomplete="off">
+    <hr/>
+    <h2><span>R&eacute;pondez s'il vous pla&icirc;t</span></h2>
 
-            <ul class="form">
-                <li>
-                    <label for="name">From:</label>
-                    <input name="name" id="name" type="text" placeholder="Your name(s)" spellcheck="false"/></li>
-                <li>
-                    <label for="email">Email:</label>
-                    <input name="email" id="email" type="email" placeholder="Email address" spellcheck="false" /></li>
-                <li>
-                    <label>I/We are&hellip;</label>
-                    <ul class="radios">
-                        <li>
+    <form method="post" class="rsvp-form" action="http://marriedinnewyork.createsend.com/t/d/s/ourk/" autocomplete="off">
 
-                            <input id="attending" type="radio" name="attending" value="yes">
-                            <label for="attending">Able to attend</label><br/>
+        <ul class="form">
+            <li>
+                <label for="name">From:</label>
+                <input name="cm-name" id="name" type="text" placeholder="Your name(s)" spellcheck="false"/></li>
+            <li>
+                <label for="email">Email:</label>
+                <input name="cm-ourk-ourk" id="email" type="email" placeholder="Email address" spellcheck="false" /></li>
+            <li>
+                <label>I/We are&hellip;</label>
+                <ul class="radios">
+                    <li>
 
-                            <input id="notattending" type="radio" name="attending" value="no">
-                            <label for="notattending">Not able to attend</label>
+                        <input id="attending" type="radio" name="cm-fo-jlky" value="5129">
+                        <label for="attending">Able to attend</label><br/>
 
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <label for="message">Your message:</label>
-                    <textarea name="message" id="message" placeholder="Message to Amy &amp; Chris" spellcheck="false"></textarea>
-                </li>
-                <li class="submit">
-                    <input type="submit" value="Send RSVP" />
-                </li>
-            </ul>
+                        <input id="notattending" type="radio" name="cm-fo-jlky" value="5130">
+                        <label for="notattending">Not able to attend</label>
 
-        </form>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <label for="message">Your message:</label>
+                <textarea name="cm-f-jlkj" id="message" placeholder="Message to Amy &amp; Chris" spellcheck="false"></textarea>
+            </li>
+            <li class="submit">
+                <input name="subscribe" type="submit" value="Send RSVP" />
+            </li>
+        </ul>
+
+    </form>
 
     </div>
 </div>

@@ -1,21 +1,13 @@
-# cap -T for command list
+set :project_name, File.basename(Dir.getwd)
+set :domain_name, "marriedinnewyork.co.uk"
 
-set :project_name,      File.basename(Dir.getwd)
-set :domain_name,       "jumpstart"
-set :domain_aliases,    []
+set :db_user, "marriedinnewyork"
+set :db_pass, "t72FjP_.uy"
+set :db_name, "marriedinnewyork"
 
-set :client_user,       ""
-set :client_pass,       ""
-set :client_name,       ""
-
-set :domain,            "webdna"
-set :user,              "deploy"
-set :deploy_to,         "/var/www/vhosts/#{domain_name}/httpdocs"
-set :repository,        "git@bitbucket.org:webdna/#{project_name}.git"
-
-set :plesk_path,        "/usr/local/psa/bin/"
-set :shared_ip,         "192.168.100.29"
-
-set :db_name,           "jumpstart"
+set :domain,        "buzz"
+set :user,          "chrisrowe"
+set :deploy_to,     "/home/#{user}/sites/#{domain_name}"
+set :repository,    "git@bitbucket.org:chrisrowenet/#{project_name}.git"
 
 load '../cap/capfilecommon'
