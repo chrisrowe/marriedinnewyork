@@ -36,7 +36,7 @@
 
                 <div class="branding">
                     <a href="/">
-                        <img src="/static/images/branding/branding.png" width="200" height="100" alt="Branding" />
+                        <img src="/static/images/branding/branding.png" width="446" height="158" alt="Branding" />
                     </a>
                 </div><!-- //.branding -->
 

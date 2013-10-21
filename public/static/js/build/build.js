@@ -9874,13 +9874,29 @@ $(document).ready(function(){
         var tab = $(this).attr("href").replace("#","");
         $(".nav_pri li").removeClass("cur");
         $(".nav_pri a[href='#"+tab+"']").parents("li").addClass("cur");
-        $(".section .content").addClass("hidden");
-        $(".section." + tab + " .content").removeClass("hidden");
+        $(".section").addClass("hidden");
+        $(".section." + tab).removeClass("hidden");
         return false;
     });
 
-});
+    // AJAX SUBMIT FORM
+    $('.rsvp-form').submit(function (e) {
+        e.preventDefault();
+        $.getJSON(
+        this.action + "?callback=?",
+        $(this).serialize(),
+        function (data) {
+            if (data.Status === 400) {
+                alert("Error: " + data.Message);
+            } else { // 200
+                if ($("html").hasClass("touch")){
+                    $('html,body').animate({ scrollTop: $(".rsvp-form").offset().top }, 1000);
+                }
+                $(".rsvp-form input, .rsvp-form textarea").attr("disabled", "disabled");
+                $(".rsvp-form").addClass("complete");
+                $(".rsvp-form .thanks").removeClass("hidden");
+            }
+        });
+    });
 
-$( window ).resize(function() {
-    $(".content_pri").height($(".section.us-and-ny").height());
 });
