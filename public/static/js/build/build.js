@@ -9857,12 +9857,6 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
 
 $(document).ready(function(){
 
-    // FORCE TO TOP
-    $(document).scrollTop(0);
-
-    // FORCE HEIGHT
-    $(".content_pri").height($(".section.us-and-ny").height());
-
     // TOGGLE IMAGE SIZES
     $("figure").on("click", function(){
         $(this).toggleClass("full");
@@ -9880,8 +9874,8 @@ $(document).ready(function(){
         var tab = $(this).attr("href").replace("#","");
         $(".nav_pri li").removeClass("cur");
         $(".nav_pri a[href='#"+tab+"']").parents("li").addClass("cur");
-        $(".section").addClass("hidden");
-        $(".section." + tab).removeClass("hidden");
+        $(".section .content").addClass("hidden");
+        $(".section." + tab + " .content").removeClass("hidden");
         return false;
     });
 
