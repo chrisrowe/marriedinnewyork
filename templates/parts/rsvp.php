@@ -1,5 +1,4 @@
 <div class="section rsvp hidden">
-    <div class="content">
 
     <h1>RSVP</h1>
 
@@ -11,6 +10,13 @@
     <h2><span>R&eacute;pondez s'il vous pla&icirc;t</span></h2>
 
     <form method="post" class="rsvp-form" action="http://marriedinnewyork.createsend.com/t/d/s/ourk/" autocomplete="off">
+
+        <div class="thanks hidden">
+            <p>
+                Thank you for RSVPing!<br/>
+                Amy & Chris x
+            </p>
+        </div>
 
         <ul class="form">
             <li>
@@ -44,5 +50,4 @@
 
     </form>
 
-    </div>
 </div>
