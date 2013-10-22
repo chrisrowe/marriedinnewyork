@@ -2,7 +2,7 @@
 
     <h1>Our Party</h1>
 
-    <p>It wouldn't be a wedding without all our family and friends so we're inviting you to <a href="http://www.ruddingtongrange.com/">Ruddington Grange Golf Club</a> on <strong>Saturday February 8th 2014</strong> at <strong>6pm</strong> to help up celebrate our new chapter together.</p>
+    <p>It wouldn't be a wedding without all our family and friends so we're inviting you to <a href="http://www.ruddingtongrange.com/">Ruddington Grange Golf Club</a> on <strong>Saturday February 8th 2014</strong> at <strong>6pm</strong> to help us celebrate our new chapter together.</p>
 
     <h2><span>Knees Up!</span></h2>
     <h3 class="date">Saturday 8th February 2014</h3>

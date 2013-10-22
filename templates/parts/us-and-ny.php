@@ -25,7 +25,7 @@
         <figcaption>Viva Las Vegas!</figcaption>
     </figure>
     <p>
-        Just over 4 months later and we'll touch down in Las Vegas for a brief 4 day stop in "The Gambling Capital of the World". We'll be checking out the strip and all it's amazing casinos and we'll probably take in a show or two.
+        Just over 4 months later and we'll touch down in Las Vegas for a brief 4 day stop in "The Gambling Capital of the World". We'll be checking out the strip and all its amazing casinos and we'll probably take in a show or two.
     </p>
 
     <hr/>
@@ -35,7 +35,7 @@
         <img src="/static/images/office.jpg" class="office" />
         <figcaption>City Clerk's Office NY</figcaption>
     </figure>
-    <p>On Wednesday the February 5th 2014 we'll share our vows and wed at the City Clerk's Office in Manhatten. We plan on celebrating our first day as married couple by taking in some of the sights and sounds of The Big Apple.</p>
+    <p>On Wednesday the February 5th 2014 we'll share our vows and wed at the City Clerk's Office in Manhatten. We plan on celebrating our first day as a married couple by taking in some of the sights and sounds of The Big Apple.</p>
     <hr/>
     <figure class="left">
         <img src="http://upload.wikimedia.org/wikipedia/commons/8/80/NYC_wideangle_south_from_Top_of_the_Rock.jpg" />
