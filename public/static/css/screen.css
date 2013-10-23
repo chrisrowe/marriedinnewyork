@@ -1059,13 +1059,23 @@ input[type="submit"]:hover {
   background: #eee;
   font-family: "kremlin-pro-web", sans-serif;
   margin: 0 -50px;
-  padding: 40px 30px 80px;
+  padding: 40px 30px 20px;
 }
 @media screen and (max-width: 500px) {
   .rsvp-form {
     margin: 0 -20px;
     padding: 40px 20px 80px;
   }
+}
+.rsvp-form li {
+  zoom: 1;
+}
+.rsvp-form li:before, .rsvp-form li:after {
+  content: "";
+  display: table;
+}
+.rsvp-form li:after {
+  clear: both;
 }
 .rsvp-form .thanks,
 .rsvp-form .form {

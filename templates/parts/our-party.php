@@ -11,6 +11,12 @@
         <figcaption>Ruddington Grange Golf Club</figcaption>
     </figure>
     <p>We'll be celebrating how we know best; by eating, drinking and dancing with our family and friends. Please use the <a href="#rsvp">RSVP form</a> and let us know you'll be coming. We hope to see you there!</p>
+
+    <hr>
+    <h2><span>Gift List</span></h2>
+    <p>We live together and have everything we need but if you wish a monetary gift will be gratefully received.</p>
+
+
     <hr>
     <h2><span>Finding Us</span></h2>
     <figure class="right">
