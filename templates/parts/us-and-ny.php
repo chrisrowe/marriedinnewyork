@@ -28,6 +28,7 @@
         Just over 4 months later and we'll touch down in Las Vegas for a brief 4 day stop in "The Gambling Capital of the World". We'll be checking out the strip and all its amazing casinos and we'll probably take in a show or two.
     </p>
 
+
     <hr/>
     <h2><span>Our Big Day</span></h2>
     <h3 class="date">Wednesday 5th February 2014</h3>
@@ -35,15 +36,17 @@
         <img src="/static/images/office.jpg" class="office" />
         <figcaption>City Clerk's Office NY</figcaption>
     </figure>
-    <p>On Wednesday the February 5th 2014 we'll share our vows and wed at the City Clerk's Office in Manhatten. We plan on celebrating our first day as a married couple by taking in some of the sights and sounds of The Big Apple.</p>
+    <p>On Wednesday the February 5th 2014 we'll share our vows and wed at the City Clerk's Office in Manhattan. We plan on celebrating our first day as a married couple by taking in some of the sights and sounds of The Big Apple.</p>
     <hr/>
     <figure class="left">
-        <img src="http://upload.wikimedia.org/wikipedia/commons/8/80/NYC_wideangle_south_from_Top_of_the_Rock.jpg" />
+        <img src="/static/images/ny.jpg" />
         <figcaption>The view from the Rockefeller Center</figcaption>
     </figure>
     <p>We'll be seeing as much of the city as we can. We already have tickets for the "Top of the Rock"; the amazing views from the Top of the Rock at the Rockefeller Center but also on our list is Central Park, The Statue Of Liberty, Grand Cetral Station and Brookyln Bridge to name just a few&hellip;</p>
 
+
     <hr>
     <p>Then a couple of days later we'll arrive back home and would love to celebrate with you at <a href="#our-party">our party</a>...</p>
+
 
 </div>
