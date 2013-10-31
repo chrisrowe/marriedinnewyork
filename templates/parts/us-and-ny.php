@@ -13,7 +13,7 @@
         <figcaption>Wollaton Park overlooking the lake</figcaption>
     </figure>
     <p>
-        After a lovely walk through the grounds of Wollaton park with <a href="http://chri.sr/PYfZ">Archie</a> we arrived at the back, overlooking the lake. After a quick dash into the woods (to retrieve a picnik) Chris reappeared, got down on one knee and popped the question. A short <em>"Yes"</em> later and we toasted the occation with a glass of bubbly and a bite to eat.
+        After a lovely walk through the grounds of Wollaton park with <a href="http://chri.sr/PYfZ">Archie</a> we arrived at the back, overlooking the lake. A quick dash into the woods (to retrieve a hidden picnik) Chris reappeared, got down on one knee and popped the question. A short <em>"Yes"</em> later and we toasted the occation with a glass of bubbly and a bite to eat.
     </p>
 
 
@@ -34,9 +34,9 @@
     <h3 class="date">Wednesday 5th February 2014</h3>
     <figure class="right">
         <img src="/static/images/office.jpg" class="office" />
-        <figcaption>City Clerk's Office NY</figcaption>
+        <figcaption>City Clerk's Office, NYC</figcaption>
     </figure>
-    <p>On Wednesday the February 5th 2014 we'll share our vows and wed at the City Clerk's Office in Manhattan. We plan on celebrating our first day as a married couple by taking in some of the sights and sounds of The Big Apple.</p>
+    <p>On Wednesday the February 5th 2014 we'll exchange our vows and wed at the City Clerk's Office in Manhattan. We plan on celebrating our first day as a married couple by taking in some of the sights and sounds of The Big Apple.</p>
     <hr/>
     <figure class="left">
         <img src="/static/images/ny.jpg" />
