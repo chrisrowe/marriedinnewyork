@@ -5,7 +5,7 @@
 
         <div class="footer" role="contentinfo">
             <div class="wrapper">
-                <p>Website by <a href="http://chrisrowe.net">Chris Rowe</a> &copy; 2013</p>
+                <p><abbr title="Thanks @linssen!">Wedsite</abbr> by <a href="http://chrisrowe.net">Chris Rowe</a> &copy; 2013</p>
             </div><!-- //.wrapper -->
         </div><!-- //.footer -->
 
