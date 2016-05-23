@@ -1,4 +1,4 @@
-<?
+<?php
 
 include("../templates/partials/start.php");
 
